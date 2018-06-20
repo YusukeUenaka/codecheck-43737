@@ -26,13 +26,14 @@ public class App {
             }
             count = i;
         }
-        for (int i = 0, l = modNum.length; i < count-1; i++) {
+        for (int i = 0, l = modNum.length; i < count; i++) {
             System.out.println(i);
             int modnum = Integer.parseInt(modNum[i].toString());
             System.out.println(modnum);
             if (input%modnum  == 0) {
                 output = output.append(str[i].toString());
             }
+            System.out.println(output);
         }
         System.out.println(output);
     }
