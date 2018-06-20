@@ -19,7 +19,7 @@ public class App {
         }
         for (int i = 0, l = base.length; i < l; ) {
             String[] array = base[i].toString().split(":", 0);
-            modNum = Integer.parseInt([i].toString());
+            modNum = Integer.parseInt(base[i].toString());
             text = array[i+1].toString();
             System.out.println(modNum);
             System.out.println(text);
