@@ -17,7 +17,9 @@ public class App {
                 System.out.println(input);
             } else {
                 base = args[i].split(":", 0);
-                str[i] = base[i + 1];
+                if (!base[i+1].isEmpty()) {
+                    str[i] = base[i + 1];
+                }
             }
         }
         for (int i = 0, l = base.length; i < l-1; i++) {
