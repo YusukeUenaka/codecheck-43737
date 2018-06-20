@@ -2,7 +2,7 @@ package codecheck;
 
 public class App {
 
-    private static String  answer = null;
+    
     public static void main(String[] args) {
         String[]base = new String[100];
         String modNum = null;
@@ -23,16 +23,17 @@ public class App {
             }
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
-            output = answer(modNum, text, input);
+            output = answer(modNum, text, input, output);
             System.out.println(output);
         }
         System.out.println(output);
     }
 
-    public static String answer (String modNum, String text, String input) {
+    public static String answer (String modNum, String text, String input, String output) {
         int modnum = Integer.parseInt(modNum);
         String str = text;
         int num = Integer.parseInt(input);
+        String answer = output;
         if (num%modnum == 0) answer += str;
         return answer;
     }
