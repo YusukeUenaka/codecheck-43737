@@ -16,6 +16,7 @@ public class App {
             } else {
                 base = args[i].toString().split(":", 0);
                 System.out.println(base[i].toString());
+                System.out.println(base[i+1].toString());
             }
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
