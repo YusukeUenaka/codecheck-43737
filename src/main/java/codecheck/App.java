@@ -2,10 +2,11 @@ package codecheck;
 
 public class App {
 
+
     public static void main(String[] args) {
         String[] base = new String[2];
-        String[] str = null;
-        String[] modNum = null;
+        String[] str = new String[1000];
+        String[] modNum = new String[1000];
         String text = null;
         int input = 0;
         String output = null;
