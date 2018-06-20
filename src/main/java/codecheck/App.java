@@ -24,7 +24,7 @@ public class App {
             }
         }
         for (int i = 0, l = modNum.length; i < l-1; i++) {
-            System.out.println(i;
+            System.out.println(i);
             int modnum = Integer.parseInt(modNum[i].toString());
             System.out.println(modnum);
             if (input%modnum  == 0) {
