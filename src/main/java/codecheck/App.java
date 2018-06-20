@@ -26,7 +26,7 @@ public class App {
     public static String answer (String modNum, String text, String input) {
         int modnum = Integer.parseInt(modNum);
         String str = text;
-        String num = input;
+        int num = Integer.parseInt(input);
         if (num%modnum == 0) answer += str;
         return answer;
     }
