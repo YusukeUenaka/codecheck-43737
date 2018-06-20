@@ -13,14 +13,15 @@ public class App {
             if (!args[i].toString().contains(":")) {
                 input = Integer.parseInt(args[i].toString());
                 System.out.println(input);
+            } else {
+                base = args[i].toString().split(":", 0);
             }
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
         }
         for (int i = 0, l = args.length; i < l-1; ) {
-            String[] array = args[i].toString().split(":", 0);
-            modNum = Integer.parseInt(array[i].toString());
-            text = array[i+1].toString();
+            modNum = Integer.parseInt(base[i].toString());
+            text = base[i+1].toString();
             System.out.println(modNum);
             System.out.println(text);
             if (input%modNum == 0) {
