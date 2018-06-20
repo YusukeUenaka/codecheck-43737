@@ -34,7 +34,10 @@ public class App {
         String str = text;
         int num = Integer.parseInt(input);
         String answer = output;
+        System.out.println(modnum);
+        System.out.println(str);
         if (num%modnum == 0) answer = answer.concat(str);
+        System.out.println(answer);
         if (answer == null ) {
             return "";
         }
