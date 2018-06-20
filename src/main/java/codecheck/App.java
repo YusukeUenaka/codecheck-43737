@@ -2,7 +2,7 @@ package codecheck;
 
 public class App {
 
-    
+
     public static void main(String[] args) {
         String[]base = new String[100];
         String modNum = null;
@@ -34,8 +34,13 @@ public class App {
         String str = text;
         int num = Integer.parseInt(input);
         String answer = output;
-        if (num%modnum == 0) answer += str;
-        return answer;
+        if (num%modnum == 0) answer = answer.concat(str);
+        if (answer == null ) {
+            return "";
+        }
+        else {
+            return answer;
+        }
     }
 
 
