@@ -24,12 +24,10 @@ public class App {
     }
 
     public static String answer (String modNum, String text, String input) {
-        String monnum = modNum;
+        int modnum = Integer.parseInt(modNum);
         String str = text;
         String num = input;
-        if (num%modnum == 0) {
-            answer += str;
-        }
+        if (num%modnum == 0) answer += str;
         return answer;
     }
 
