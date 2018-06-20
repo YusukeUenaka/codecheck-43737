@@ -23,7 +23,7 @@ public class App {
                 System.out.println(str[i].toString());
             }
         }
-        for (int i = 0, l = modNum.length; i < l; i++) {
+        for (int i = 0, l = modNum.length; i < l-1; i++) {
             int modnum = Integer.parseInt(modNum[i].toString());
             if (input%modnum  == 0) {
                 output = output.concat(str[i].toString());
