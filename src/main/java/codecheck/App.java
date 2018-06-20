@@ -17,9 +17,9 @@ public class App {
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
         }
-        for (int i = 0, l = base.length; i < l; ) {
-            String[] array = base[i].toString().split(":", 0);
-            modNum = Integer.parseInt(base[i].toString());
+        for (int i = 0, l = args.length; i < l-1; ) {
+            String[] array = args[i].toString().split(":", 0);
+            modNum = Integer.parseInt(base[i].toString();
             text = array[i+1].toString();
             System.out.println(modNum);
             System.out.println(text);
