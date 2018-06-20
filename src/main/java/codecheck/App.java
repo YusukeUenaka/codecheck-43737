@@ -9,7 +9,8 @@ public class App {
         String[] modNum = new String[1000];
         String text = null;
         int input = 0;
-        String output = null;
+        StringBuilder output = new StringBuilder();
+        //String output = null;
         //String output = String.format("argv[%s]: %s", i, args[i]);
         for (int i = 0, l = args.length; i < l; i++) {
             if (!args[i].toString().contains(":")) {
@@ -28,7 +29,7 @@ public class App {
             int modnum = Integer.parseInt(modNum[i].toString());
             System.out.println(modnum);
             if (input%modnum  == 0) {
-                output = output.concat(str[i].toString());
+                output = output.append(str[i].toString());
             }
         }
         System.out.println(output);
