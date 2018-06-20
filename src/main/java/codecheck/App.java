@@ -26,6 +26,10 @@ public class App {
                 output = output.append(str[i].toString());
             }
         }
-        System.out.println(output);
+        if (output.toString().isEmpty()) {
+            System.out.println(input);    
+        } else {
+            System.out.println(output);
+        }
     }
 }
