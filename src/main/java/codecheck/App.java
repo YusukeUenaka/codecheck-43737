@@ -5,47 +5,30 @@ public class App {
 
     public static void main(String[] args) {
         String[]base = new String[100];
-        String modNum = null;
+        int modNum = 0;
         String text = null;
-        String input = null;
+        int input = 0;
         String output = null;
         for (int i = 0, l = args.length; i < l; i++) {
-            if (args[i].toString().contains(":")) {
-                base = args[i].toString().split(":", 0);
-                modNum = base[0].toString();
-                text = base[1].toString();
-                System.out.println(modNum);
-                System.out.println(text);
-
-            } else {
-                input = args[i].toString();
+            if (!args[i].toString().contains(":")) {
+                input = Integer.parseInt(args[i].toString());
                 System.out.println(input);
             }
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
-            output = answer(modNum, text, input, output);
-            System.out.println(output);
+        }
+        for (int i = 0, l = base.length; i < l; ) {
+            String[] array = base[i].toString().split(":", 0);
+            modNum = Integer.parseInt([i].toString());
+            text = array[i+1].toString();
+            System.out.println(modNum);
+            System.out.println(text);
+            if (input%modNum == 0) {
+                output = output.concat(text);
+            }
+            i +=2;
         }
         System.out.println(output);
     }
-
-    public static String answer (String modNum, String text, String input, String output) {
-        int modnum = Integer.parseInt(modNum);
-        String str = text;
-        int num = Integer.parseInt(input);
-        String answer = output;
-        System.out.println(modnum);
-        System.out.println(str);
-        if (num%modnum == 0) answer = answer.concat(str);
-        System.out.println(answer);
-        if (answer == null ) {
-            return "";
-        }
-        else {
-            return answer;
-        }
-    }
-
-
 
 }
