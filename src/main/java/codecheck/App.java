@@ -4,8 +4,8 @@ public class App {
 
 
     public static void main(String[] args) {
-        String[] base = new String[];
-        String[] str = new String[];
+        String[] base = null;
+        String[] str = null;
         int modNum = 0;
         String text = null;
         int input = 0;
