@@ -8,17 +8,23 @@ public class App {
         String modNum = null;
         String text = null;
         String input = null;
+        String output = null;
         for (int i = 0, l = args.length; i < l; i++) {
             if (args[i].toString().contains(":")) {
                 base = args[i].toString().split(":", 0);
                 modNum = base[0].toString();
                 text = base[1].toString();
+                System.out.println(modNum);
+                System.out.println(text);
+
             } else {
                 input = args[i].toString();
+                System.out.println(input);
             }
 
             //String output = String.format("argv[%s]: %s", i, args[i]);
             output = answer(modNum, text, input);
+            System.out.println(output);
         }
         System.out.println(output);
     }
