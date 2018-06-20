@@ -9,6 +9,7 @@ public class App {
         String[] modNum = new String[1000];
         String text = null;
         int input = 0;
+        int count = 0;
         StringBuilder output = new StringBuilder();
         //String output = null;
         //String output = String.format("argv[%s]: %s", i, args[i]);
@@ -23,8 +24,9 @@ public class App {
                 System.out.println(modNum[i].toString());
                 System.out.println(str[i].toString());
             }
+            count = i;
         }
-        for (int i = 0, l = modNum.length; i < l-1; i++) {
+        for (int i = 0, l = modNum.length; i < count-1; i++) {
             System.out.println(i);
             int modnum = Integer.parseInt(modNum[i].toString());
             System.out.println(modnum);
